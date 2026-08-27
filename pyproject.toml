@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "readbox"
+version = "0.1.0"
+description = "Export Read AI meeting reports and transcripts to Dropbox as Markdown + JSON."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Rahat Masum", email = "rahatapu103@gmail.com" }]
+keywords = ["read-ai", "dropbox", "meetings", "transcripts", "export", "cli"]
+dependencies = [
+    "requests>=2.31",
+    "dropbox>=12",
+    "typer>=0.12",
+    "platformdirs>=4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "build", "twine"]
+
+[project.scripts]
+readbox = "readbox.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rahat-axes/read2dropbox"
+Repository = "https://github.com/rahat-axes/read2dropbox"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/readbox"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/readbox", "README.md", "LICENSE", "pyproject.toml"]

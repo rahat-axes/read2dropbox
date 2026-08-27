@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+
+# build artifacts
+dist/
+build/
+*.egg-info/
+
+# secrets & local state — NEVER commit
+.env
+*.token
+
+# dev info
+claude/
+scripts/
