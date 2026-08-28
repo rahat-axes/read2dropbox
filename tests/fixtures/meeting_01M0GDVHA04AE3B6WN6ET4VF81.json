@@ -1,0 +1,181 @@
+{
+  "id": "01M0GDVHA04AE3B6WN6ET4VF81",
+  "start_time_ms": 1787257800000,
+  "end_time_ms": 1787260500000,
+  "scheduled_start_time_ms": 1787257680000,
+  "scheduled_end_time_ms": 1787260620000,
+  "participants": [
+    {
+      "name": "Dana Whitfield",
+      "email": "dana@acme.dev",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "Priya Nair",
+      "email": "priya@acme.dev",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "Sofia Martins",
+      "email": "sofia@acme.dev",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "James Okafor",
+      "email": "james@partner.io",
+      "invited": true,
+      "attended": true
+    }
+  ],
+  "owner": {
+    "name": "Dana Whitfield",
+    "email": "dana@acme.dev"
+  },
+  "title": "Product Planning — Q4 Roadmap",
+  "report_url": "https://app.read.ai/analytics/meetings/01M0GDVHA04AE3B6WN6ET4VF81",
+  "platform": "google_meet",
+  "platform_id": "abc-defg-hij",
+  "folders": [
+    "Product"
+  ],
+  "live_enabled": false,
+  "access_level": "owner",
+  "summary": "Product reviewed candidate themes for the Q4 roadmap. The group aligned on three bets: onboarding activation, a self-serve billing portal, and mobile performance. Self-serve billing was ranked highest because it unblocks the sales team. Sofia raised that mobile performance needs research before it can be scoped. The decision was to commit to billing and onboarding for Q4 and keep mobile performance as a stretch pending a research spike.",
+  "chapter_summaries": [
+    {
+      "title": "Choosing the Q4 Themes",
+      "description": "Dana presented three candidate themes: onboarding activation, self-serve billing, and mobile performance. James argued self-serve billing is the highest-leverage bet because it unblocks stalled sales deals, and Priya noted billing is well understood on the engineering side."
+    },
+    {
+      "title": "Commitments and the Mobile Research Spike",
+      "description": "Sofia flagged that mobile performance can't be scoped until its slowness is understood, so the group committed billing and onboarding for Q4 and kept mobile as a stretch pending a one-week research spike."
+    }
+  ],
+  "action_items": [
+    "Dana Whitfield will draft the self-serve billing portal one-pager.",
+    "Sofia Martins will scope the onboarding activation experiments.",
+    "Sofia Martins will run a one-week research spike on mobile performance.",
+    "James Okafor will share the Q4 commitments with the sales team."
+  ],
+  "key_questions": [
+    "Which Q4 bet unblocks revenue fastest?",
+    "Is mobile performance a scoping problem or a research problem?"
+  ],
+  "topics": [
+    "Q4 roadmap themes",
+    "Self-serve billing portal",
+    "Onboarding activation",
+    "Mobile performance research spike"
+  ],
+  "transcript": {
+    "speakers": [
+      {
+        "name": "Dana Whitfield"
+      },
+      {
+        "name": "James Okafor"
+      },
+      {
+        "name": "Priya Nair"
+      },
+      {
+        "name": "Sofia Martins"
+      }
+    ],
+    "turns": [
+      {
+        "speaker": {
+          "name": "Dana Whitfield"
+        },
+        "text": "Thanks for joining. Goal today is to land on our Q4 themes.",
+        "start_time_ms": 1787257800000,
+        "end_time_ms": 1787257804000
+      },
+      {
+        "speaker": {
+          "name": "Dana Whitfield"
+        },
+        "text": "I've got three candidates: onboarding activation, self-serve billing, and mobile performance.",
+        "start_time_ms": 1787257804800,
+        "end_time_ms": 1787257810380
+      },
+      {
+        "speaker": {
+          "name": "James Okafor"
+        },
+        "text": "From the sales side, self-serve billing is the big one. It unblocks deals that stall on manual invoicing.",
+        "start_time_ms": 1787257811180,
+        "end_time_ms": 1787257817480
+      },
+      {
+        "speaker": {
+          "name": "Priya Nair"
+        },
+        "text": "Billing is well understood on the eng side too. We could scope it quickly.",
+        "start_time_ms": 1787257818280,
+        "end_time_ms": 1787257822720
+      },
+      {
+        "speaker": {
+          "name": "Sofia Martins"
+        },
+        "text": "Onboarding activation I can scope. Mobile performance I can't — we don't actually know where the slowness is yet.",
+        "start_time_ms": 1787257823520,
+        "end_time_ms": 1787257830300
+      },
+      {
+        "speaker": {
+          "name": "Dana Whitfield"
+        },
+        "text": "So mobile needs research before it's a real roadmap item?",
+        "start_time_ms": 1787257831100,
+        "end_time_ms": 1787257835100
+      },
+      {
+        "speaker": {
+          "name": "Sofia Martins"
+        },
+        "text": "Right. Give me a one-week spike and I'll come back with something scopeable.",
+        "start_time_ms": 1787257835900,
+        "end_time_ms": 1787257840460
+      },
+      {
+        "speaker": {
+          "name": "Priya Nair"
+        },
+        "text": "I'd commit to billing and onboarding for Q4 and keep mobile as a stretch.",
+        "start_time_ms": 1787257841260,
+        "end_time_ms": 1787257845640
+      },
+      {
+        "speaker": {
+          "name": "James Okafor"
+        },
+        "text": "That works for sales as long as billing is firmly in.",
+        "start_time_ms": 1787257846440,
+        "end_time_ms": 1787257850440
+      },
+      {
+        "speaker": {
+          "name": "Dana Whitfield"
+        },
+        "text": "Agreed. Billing and onboarding are committed, mobile is a stretch pending Sofia's spike. I'll write the billing one-pager.",
+        "start_time_ms": 1787257851240,
+        "end_time_ms": 1787257858560
+      }
+    ],
+    "text": "[Dana Whitfield]: Thanks for joining. Goal today is to land on our Q4 themes.\n[Dana Whitfield]: I've got three candidates: onboarding activation, self-serve billing, and mobile performance.\n[James Okafor]: From the sales side, self-serve billing is the big one. It unblocks deals that stall on manual invoicing.\n[Priya Nair]: Billing is well understood on the eng side too. We could scope it quickly.\n[Sofia Martins]: Onboarding activation I can scope. Mobile performance I can't — we don't actually know where the slowness is yet.\n[Dana Whitfield]: So mobile needs research before it's a real roadmap item?\n[Sofia Martins]: Right. Give me a one-week spike and I'll come back with something scopeable.\n[Priya Nair]: I'd commit to billing and onboarding for Q4 and keep mobile as a stretch.\n[James Okafor]: That works for sales as long as billing is firmly in.\n[Dana Whitfield]: Agreed. Billing and onboarding are committed, mobile is a stretch pending Sofia's spike. I'll write the billing one-pager."
+  },
+  "metrics": {
+    "read_score": 81.0,
+    "sentiment": 44.3,
+    "engagement": 69.1
+  },
+  "recording_download": {
+    "url": "https://api.read.ai/v1/meetings/01M0GDVHA04AE3B6WN6ET4VF81/recording?token=fixture",
+    "expires_in": 3600
+  }
+}

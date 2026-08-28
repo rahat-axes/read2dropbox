@@ -1,0 +1,142 @@
+{
+  "object": "list",
+  "url": "/v1/meetings",
+  "has_more": false,
+  "next": null,
+  "data": [
+    {
+      "id": "01M0JGSW00XA19RMEX1TREZ76W",
+      "start_time_ms": 1787328000000,
+      "end_time_ms": 1787330520000,
+      "scheduled_start_time_ms": 1787327880000,
+      "scheduled_end_time_ms": 1787330640000,
+      "participants": [
+        {
+          "name": "Priya Nair",
+          "email": "priya@acme.dev",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "Marcus Lee",
+          "email": "marcus@acme.dev",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "Dana Whitfield",
+          "email": "dana@acme.dev",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "Tomás Rivera",
+          "email": "tomas@acme.dev",
+          "invited": true,
+          "attended": false
+        }
+      ],
+      "owner": {
+        "name": "Priya Nair",
+        "email": "priya@acme.dev"
+      },
+      "title": "Engineering Sync",
+      "report_url": "https://app.read.ai/analytics/meetings/01M0JGSW00XA19RMEX1TREZ76W",
+      "platform": "zoom",
+      "platform_id": "912 3456 7890",
+      "folders": [
+        "Engineering",
+        "Weekly Sync"
+      ],
+      "live_enabled": false,
+      "access_level": "owner"
+    },
+    {
+      "id": "01M0GDVHA04AE3B6WN6ET4VF81",
+      "start_time_ms": 1787257800000,
+      "end_time_ms": 1787260500000,
+      "scheduled_start_time_ms": 1787257680000,
+      "scheduled_end_time_ms": 1787260620000,
+      "participants": [
+        {
+          "name": "Dana Whitfield",
+          "email": "dana@acme.dev",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "Priya Nair",
+          "email": "priya@acme.dev",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "Sofia Martins",
+          "email": "sofia@acme.dev",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "James Okafor",
+          "email": "james@partner.io",
+          "invited": true,
+          "attended": true
+        }
+      ],
+      "owner": {
+        "name": "Dana Whitfield",
+        "email": "dana@acme.dev"
+      },
+      "title": "Product Planning — Q4 Roadmap",
+      "report_url": "https://app.read.ai/analytics/meetings/01M0GDVHA04AE3B6WN6ET4VF81",
+      "platform": "google_meet",
+      "platform_id": "abc-defg-hij",
+      "folders": [
+        "Product"
+      ],
+      "live_enabled": false,
+      "access_level": "owner"
+    },
+    {
+      "id": "01M0AP5VC00TRE5A5C4BGN7P7W",
+      "start_time_ms": 1787065200000,
+      "end_time_ms": 1787067300000,
+      "scheduled_start_time_ms": 1787065080000,
+      "scheduled_end_time_ms": 1787067420000,
+      "participants": [
+        {
+          "name": "Marcus Lee",
+          "email": "marcus@acme.dev",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "Elena Petrova",
+          "email": "elena@northwind.com",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "Raj Patel",
+          "email": "raj@northwind.com",
+          "invited": true,
+          "attended": true
+        }
+      ],
+      "owner": {
+        "name": "Marcus Lee",
+        "email": "marcus@acme.dev"
+      },
+      "title": "Acme × Northwind Client Check-in",
+      "report_url": "https://app.read.ai/analytics/meetings/01M0AP5VC00TRE5A5C4BGN7P7W",
+      "platform": "microsoft_teams",
+      "platform_id": "19:meeting_abcd1234",
+      "folders": [
+        "Clients",
+        "Northwind"
+      ],
+      "live_enabled": false,
+      "access_level": "owner"
+    }
+  ]
+}

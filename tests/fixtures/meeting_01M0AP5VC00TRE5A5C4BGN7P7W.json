@@ -1,0 +1,171 @@
+{
+  "id": "01M0AP5VC00TRE5A5C4BGN7P7W",
+  "start_time_ms": 1787065200000,
+  "end_time_ms": 1787067300000,
+  "scheduled_start_time_ms": 1787065080000,
+  "scheduled_end_time_ms": 1787067420000,
+  "participants": [
+    {
+      "name": "Marcus Lee",
+      "email": "marcus@acme.dev",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "Elena Petrova",
+      "email": "elena@northwind.com",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "Raj Patel",
+      "email": "raj@northwind.com",
+      "invited": true,
+      "attended": true
+    }
+  ],
+  "owner": {
+    "name": "Marcus Lee",
+    "email": "marcus@acme.dev"
+  },
+  "title": "Acme × Northwind Client Check-in",
+  "report_url": "https://app.read.ai/analytics/meetings/01M0AP5VC00TRE5A5C4BGN7P7W",
+  "platform": "microsoft_teams",
+  "platform_id": "19:meeting_abcd1234",
+  "folders": [
+    "Clients",
+    "Northwind"
+  ],
+  "live_enabled": false,
+  "access_level": "owner",
+  "summary": "Monthly check-in with Northwind. Elena reported the integration is live in their staging environment and working well. The main open item is SSO: Northwind needs SAML support before they can roll out to production. Marcus confirmed SAML is on the roadmap and committed to a firm date by end of week. Both sides agreed to schedule a technical deep-dive on SSO for next week.",
+  "chapter_summaries": [
+    {
+      "title": "Integration Status & SSO Requirement",
+      "description": "Elena confirmed the integration is live and working in Northwind's staging environment. Raj identified SAML single sign-on as the one item blocking a company-wide production rollout."
+    },
+    {
+      "title": "Commitments & Next Steps",
+      "description": "Marcus committed to sending a firm SAML delivery date by end of week and the sides agreed to a technical deep-dive next week, with Raj preparing a staging-to-production checklist to review together."
+    }
+  ],
+  "action_items": [
+    "Marcus Lee will send Northwind a firm SAML SSO delivery date by end of week.",
+    "Elena Petrova will schedule an SSO technical deep-dive for next week.",
+    "Raj Patel will prepare the staging-to-production migration checklist."
+  ],
+  "key_questions": [
+    "When can SAML SSO be delivered?",
+    "What blocks the production rollout besides SSO?"
+  ],
+  "topics": [
+    "Integration status in staging",
+    "SAML SSO requirement",
+    "Production rollout timeline"
+  ],
+  "transcript": {
+    "speakers": [
+      {
+        "name": "Marcus Lee"
+      },
+      {
+        "name": "Elena Petrova"
+      },
+      {
+        "name": "Raj Patel"
+      }
+    ],
+    "turns": [
+      {
+        "speaker": {
+          "name": "Marcus Lee"
+        },
+        "text": "Hi Elena, Raj — thanks for the time. How's the integration looking on your side?",
+        "start_time_ms": 1787065200000,
+        "end_time_ms": 1787065204800
+      },
+      {
+        "speaker": {
+          "name": "Elena Petrova"
+        },
+        "text": "Good news: it's live in our staging environment and working well. The team's happy.",
+        "start_time_ms": 1787065205600,
+        "end_time_ms": 1787065210580
+      },
+      {
+        "speaker": {
+          "name": "Raj Patel"
+        },
+        "text": "The one thing holding up production is single sign-on. We need SAML before we can roll out company-wide.",
+        "start_time_ms": 1787065211380,
+        "end_time_ms": 1787065217620
+      },
+      {
+        "speaker": {
+          "name": "Marcus Lee"
+        },
+        "text": "SAML is on our roadmap. Let me get you a firm date rather than a vague 'soon'.",
+        "start_time_ms": 1787065218420,
+        "end_time_ms": 1787065223100
+      },
+      {
+        "speaker": {
+          "name": "Elena Petrova"
+        },
+        "text": "A firm date would really help us plan the rollout internally.",
+        "start_time_ms": 1787065223900,
+        "end_time_ms": 1787065227900
+      },
+      {
+        "speaker": {
+          "name": "Marcus Lee"
+        },
+        "text": "I'll have a committed SAML date to you by end of this week.",
+        "start_time_ms": 1787065228700,
+        "end_time_ms": 1787065232700
+      },
+      {
+        "speaker": {
+          "name": "Raj Patel"
+        },
+        "text": "Perfect. Could we also do a technical deep-dive so our identity team is ready?",
+        "start_time_ms": 1787065233500,
+        "end_time_ms": 1787065238180
+      },
+      {
+        "speaker": {
+          "name": "Elena Petrova"
+        },
+        "text": "I'll set that up for next week and send an invite.",
+        "start_time_ms": 1787065238980,
+        "end_time_ms": 1787065242980
+      },
+      {
+        "speaker": {
+          "name": "Marcus Lee"
+        },
+        "text": "Great. Raj, if you can prep a staging-to-prod checklist, we'll review it together on that call.",
+        "start_time_ms": 1787065243780,
+        "end_time_ms": 1787065249480
+      },
+      {
+        "speaker": {
+          "name": "Raj Patel"
+        },
+        "text": "Will do.",
+        "start_time_ms": 1787065250280,
+        "end_time_ms": 1787065254280
+      }
+    ],
+    "text": "[Marcus Lee]: Hi Elena, Raj — thanks for the time. How's the integration looking on your side?\n[Elena Petrova]: Good news: it's live in our staging environment and working well. The team's happy.\n[Raj Patel]: The one thing holding up production is single sign-on. We need SAML before we can roll out company-wide.\n[Marcus Lee]: SAML is on our roadmap. Let me get you a firm date rather than a vague 'soon'.\n[Elena Petrova]: A firm date would really help us plan the rollout internally.\n[Marcus Lee]: I'll have a committed SAML date to you by end of this week.\n[Raj Patel]: Perfect. Could we also do a technical deep-dive so our identity team is ready?\n[Elena Petrova]: I'll set that up for next week and send an invite.\n[Marcus Lee]: Great. Raj, if you can prep a staging-to-prod checklist, we'll review it together on that call.\n[Raj Patel]: Will do."
+  },
+  "metrics": {
+    "read_score": 79.4,
+    "sentiment": 52.1,
+    "engagement": 60.3
+  },
+  "recording_download": {
+    "url": "https://api.read.ai/v1/meetings/01M0AP5VC00TRE5A5C4BGN7P7W/recording?token=fixture",
+    "expires_in": 3600
+  }
+}

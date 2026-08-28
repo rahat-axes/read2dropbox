@@ -1,0 +1,212 @@
+{
+  "object": "list",
+  "url": "/v1/meetings",
+  "has_more": false,
+  "data": [
+    {
+      "id": "01KDRNJD1KAG9RTPDJWED2V1DH",
+      "start_time_ms": 1767301200000,
+      "end_time_ms": 1767302745925,
+      "scheduled_start_time_ms": 1767301200000,
+      "scheduled_end_time_ms": 1767302745925,
+      "participants": [
+        {
+          "name": "Alison Barker",
+          "email": "alison.barker@read.ai",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "Eliab Sisay",
+          "email": "eliab.sisay@read.ai",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "Kelcey Hawthorne",
+          "email": "kelcey.hawthorne@read.ai",
+          "invited": true,
+          "attended": true
+        },
+        {
+          "name": "Zoe Robinson",
+          "email": "zoe@read.ai",
+          "invited": true,
+          "attended": true
+        }
+      ],
+      "owner": {
+        "name": "Read AI",
+        "email": "support@read.ai"
+      },
+      "title": "Onboarding to Read AI - Sample Report",
+      "report_url": "https://app.read.ai/analytics/meetings/01KDRNJD1KAG9RTPDJWED2V1DH",
+      "platform": "meet",
+      "platform_id": "eyn-fbdd-riz",
+      "folders": [
+        "Sample Reports - Read AI"
+      ],
+      "live_enabled": false
+    },
+    {
+      "id": "01KD42W96QHMPZMHGSFRJ2F5H3",
+      "start_time_ms": 1767297600000,
+      "end_time_ms": 1767297854881,
+      "participants": [
+        {
+          "name": "Julia Davis",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Kelly Gorrell",
+          "email": "kelly.gorrell@read.ai",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Layla Airola",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Vasim Patel",
+          "invited": false,
+          "attended": true
+        }
+      ],
+      "owner": {
+        "name": "Read AI",
+        "email": "support@read.ai"
+      },
+      "title": "Using a Meeting Report - Sample Report",
+      "report_url": "https://app.read.ai/analytics/meetings/01KD42W96QHMPZMHGSFRJ2F5H3",
+      "platform": "meet",
+      "platform_id": "atq-mvor-xhd",
+      "folders": [
+        "Sample Reports - Read AI"
+      ],
+      "live_enabled": true
+    },
+    {
+      "id": "01KD65H7TWZ10T2KJTMJ3VFQQ9",
+      "start_time_ms": 1767294000000,
+      "end_time_ms": 1767294511573,
+      "participants": [
+        {
+          "name": "Ben Hennessy",
+          "email": "ben.hennessy@read.ai",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Matt Swett",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Meredith Darnell",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Taylor Argens",
+          "invited": false,
+          "attended": true
+        }
+      ],
+      "owner": {
+        "name": "Read AI",
+        "email": "support@read.ai"
+      },
+      "title": "Try Out Search Copilot - Sample Report",
+      "report_url": "https://app.read.ai/analytics/meetings/01KD65H7TWZ10T2KJTMJ3VFQQ9",
+      "platform": "meet",
+      "platform_id": "vfy-fiec-wbj",
+      "folders": [
+        "Sample Reports - Read AI"
+      ],
+      "live_enabled": true
+    },
+    {
+      "id": "01KD62407STV70TW8GX5DA8S7E",
+      "start_time_ms": 1767290400000,
+      "end_time_ms": 1767290666970,
+      "participants": [
+        {
+          "name": "Ben Hennessy",
+          "email": "ben.hennessy@read.ai",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Julia Davis",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Mike Bolton",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Sarah Spagnolo",
+          "invited": false,
+          "attended": true
+        }
+      ],
+      "owner": {
+        "name": "Read AI",
+        "email": "support@read.ai"
+      },
+      "title": "Desktop and Mobile App Walkthrough - Sample Report",
+      "report_url": "https://app.read.ai/analytics/meetings/01KD62407STV70TW8GX5DA8S7E",
+      "platform": "meet",
+      "platform_id": "fgi-ojgx-qjd",
+      "folders": [
+        "Sample Reports - Read AI"
+      ],
+      "live_enabled": true
+    },
+    {
+      "id": "01KDNM4YFCM2PAW00NYMKM0WZ1",
+      "start_time_ms": 1767286800000,
+      "end_time_ms": 1767287364947,
+      "participants": [
+        {
+          "name": "Alison Barker",
+          "email": "alison.barker@read.ai",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Anna Fang",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Megan Gibson",
+          "invited": false,
+          "attended": true
+        },
+        {
+          "name": "Sarah Spagnolo",
+          "invited": false,
+          "attended": true
+        }
+      ],
+      "owner": {
+        "name": "Read AI",
+        "email": "support@read.ai"
+      },
+      "title": "Explore Real World Use Cases - Sample Report",
+      "report_url": "https://app.read.ai/analytics/meetings/01KDNM4YFCM2PAW00NYMKM0WZ1",
+      "platform": "meet",
+      "platform_id": "ffq-ztyr-zow",
+      "folders": [
+        "Sample Reports - Read AI"
+      ],
+      "live_enabled": false
+    }
+  ]
+}

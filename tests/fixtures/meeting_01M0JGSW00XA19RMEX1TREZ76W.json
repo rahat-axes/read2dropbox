@@ -1,0 +1,211 @@
+{
+  "id": "01M0JGSW00XA19RMEX1TREZ76W",
+  "start_time_ms": 1787328000000,
+  "end_time_ms": 1787330520000,
+  "scheduled_start_time_ms": 1787327880000,
+  "scheduled_end_time_ms": 1787330640000,
+  "participants": [
+    {
+      "name": "Priya Nair",
+      "email": "priya@acme.dev",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "Marcus Lee",
+      "email": "marcus@acme.dev",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "Dana Whitfield",
+      "email": "dana@acme.dev",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "Tomás Rivera",
+      "email": "tomas@acme.dev",
+      "invited": true,
+      "attended": false
+    }
+  ],
+  "owner": {
+    "name": "Priya Nair",
+    "email": "priya@acme.dev"
+  },
+  "title": "Engineering Sync",
+  "report_url": "https://app.read.ai/analytics/meetings/01M0JGSW00XA19RMEX1TREZ76W",
+  "platform": "zoom",
+  "platform_id": "912 3456 7890",
+  "folders": [
+    "Engineering",
+    "Weekly Sync"
+  ],
+  "live_enabled": false,
+  "access_level": "owner",
+  "summary": "The team reviewed progress on the checkout rewrite and agreed the payment service migration is on track for the end of the sprint. Marcus flagged flaky integration tests in CI as the main risk; Dana volunteered to quarantine the worst offenders so releases aren't blocked. The group decided to cut a release candidate on Thursday and postpone the search indexing work to next sprint to protect the checkout deadline.",
+  "chapter_summaries": [
+    {
+      "title": "Checkout Rewrite & Migration Status",
+      "description": "Marcus reported the payment service migration is basically done and on track for end of sprint. Dana raised flaky CI integration tests as the main blocker and offered to quarantine the three worst offenders so they stop failing the pipeline, with a proper fix to follow next week."
+    },
+    {
+      "title": "Release Candidate & Scope Decisions",
+      "description": "The group agreed to cut a release candidate on Thursday, contingent on a rollback runbook Marcus will own. To protect the checkout deadline they decided to defer the search indexing work to next sprint and move those tickets in Jira."
+    }
+  ],
+  "action_items": [
+    "Dana Whitfield will quarantine the three flakiest payment integration tests in CI.",
+    "Priya Nair will cut the checkout release candidate on Thursday.",
+    "Marcus Lee will write the migration rollback runbook by Wednesday.",
+    "Priya Nair will move the search indexing tickets to next sprint in Jira."
+  ],
+  "key_questions": [
+    "Do we have a rollback path if the payment migration fails mid-release?",
+    "Can we ship checkout without the new search indexing?"
+  ],
+  "topics": [
+    "Checkout rewrite progress",
+    "CI flakiness and test quarantine",
+    "Release candidate timing",
+    "Deferring search indexing work"
+  ],
+  "transcript": {
+    "speakers": [
+      {
+        "name": "Priya Nair"
+      },
+      {
+        "name": "Marcus Lee"
+      },
+      {
+        "name": "Dana Whitfield"
+      }
+    ],
+    "turns": [
+      {
+        "speaker": {
+          "name": "Priya Nair"
+        },
+        "text": "Morning everyone. Let's start with the checkout rewrite — where are we?",
+        "start_time_ms": 1787328000000,
+        "end_time_ms": 1787328004260
+      },
+      {
+        "speaker": {
+          "name": "Marcus Lee"
+        },
+        "text": "Payment service migration is basically done. I'm confident we hit end of sprint.",
+        "start_time_ms": 1787328005060,
+        "end_time_ms": 1787328009860
+      },
+      {
+        "speaker": {
+          "name": "Dana Whitfield"
+        },
+        "text": "The blocker is CI. The payment integration tests are flaky and they keep failing the pipeline.",
+        "start_time_ms": 1787328010660,
+        "end_time_ms": 1787328016300
+      },
+      {
+        "speaker": {
+          "name": "Marcus Lee"
+        },
+        "text": "It's the same three tests every time. They're timing-dependent.",
+        "start_time_ms": 1787328017100,
+        "end_time_ms": 1787328021100
+      },
+      {
+        "speaker": {
+          "name": "Dana Whitfield"
+        },
+        "text": "I can quarantine those three so they don't block releases, then fix them properly next week.",
+        "start_time_ms": 1787328021900,
+        "end_time_ms": 1787328027420
+      },
+      {
+        "speaker": {
+          "name": "Priya Nair"
+        },
+        "text": "Do that. I don't want flaky tests holding up a release candidate.",
+        "start_time_ms": 1787328028220,
+        "end_time_ms": 1787328032220
+      },
+      {
+        "speaker": {
+          "name": "Priya Nair"
+        },
+        "text": "Speaking of which — can we cut an RC Thursday?",
+        "start_time_ms": 1787328033020,
+        "end_time_ms": 1787328037020
+      },
+      {
+        "speaker": {
+          "name": "Marcus Lee"
+        },
+        "text": "Yes, as long as the rollback runbook exists. If the migration goes wrong mid-release we need a way back.",
+        "start_time_ms": 1787328037820,
+        "end_time_ms": 1787328044060
+      },
+      {
+        "speaker": {
+          "name": "Priya Nair"
+        },
+        "text": "Marcus, can you own the rollback runbook before Thursday?",
+        "start_time_ms": 1787328044860,
+        "end_time_ms": 1787328048860
+      },
+      {
+        "speaker": {
+          "name": "Marcus Lee"
+        },
+        "text": "I'll have it done Wednesday.",
+        "start_time_ms": 1787328049660,
+        "end_time_ms": 1787328053660
+      },
+      {
+        "speaker": {
+          "name": "Dana Whitfield"
+        },
+        "text": "What about the search indexing work? That's also due this sprint.",
+        "start_time_ms": 1787328054460,
+        "end_time_ms": 1787328058460
+      },
+      {
+        "speaker": {
+          "name": "Priya Nair"
+        },
+        "text": "Let's push search indexing to next sprint. Checkout is the priority and I'd rather protect that deadline.",
+        "start_time_ms": 1787328059260,
+        "end_time_ms": 1787328065560
+      },
+      {
+        "speaker": {
+          "name": "Dana Whitfield"
+        },
+        "text": "Works for me. I'll move those tickets in Jira.",
+        "start_time_ms": 1787328066360,
+        "end_time_ms": 1787328070360
+      },
+      {
+        "speaker": {
+          "name": "Priya Nair"
+        },
+        "text": "Great. Tomás is out today, I'll catch him up async. Thanks all.",
+        "start_time_ms": 1787328071160,
+        "end_time_ms": 1787328075160
+      }
+    ],
+    "text": "[Priya Nair]: Morning everyone. Let's start with the checkout rewrite — where are we?\n[Marcus Lee]: Payment service migration is basically done. I'm confident we hit end of sprint.\n[Dana Whitfield]: The blocker is CI. The payment integration tests are flaky and they keep failing the pipeline.\n[Marcus Lee]: It's the same three tests every time. They're timing-dependent.\n[Dana Whitfield]: I can quarantine those three so they don't block releases, then fix them properly next week.\n[Priya Nair]: Do that. I don't want flaky tests holding up a release candidate.\n[Priya Nair]: Speaking of which — can we cut an RC Thursday?\n[Marcus Lee]: Yes, as long as the rollback runbook exists. If the migration goes wrong mid-release we need a way back.\n[Priya Nair]: Marcus, can you own the rollback runbook before Thursday?\n[Marcus Lee]: I'll have it done Wednesday.\n[Dana Whitfield]: What about the search indexing work? That's also due this sprint.\n[Priya Nair]: Let's push search indexing to next sprint. Checkout is the priority and I'd rather protect that deadline.\n[Dana Whitfield]: Works for me. I'll move those tickets in Jira.\n[Priya Nair]: Great. Tomás is out today, I'll catch him up async. Thanks all."
+  },
+  "metrics": {
+    "read_score": 88.2,
+    "sentiment": 31.4,
+    "engagement": 72.6
+  },
+  "recording_download": {
+    "url": "https://api.read.ai/v1/meetings/01M0JGSW00XA19RMEX1TREZ76W/recording?token=fixture",
+    "expires_in": 3600
+  }
+}

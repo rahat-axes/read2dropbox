@@ -1,0 +1,334 @@
+{
+  "id": "01KDRNJD1KAG9RTPDJWED2V1DH",
+  "start_time_ms": 1767301200000,
+  "end_time_ms": 1767302745925,
+  "scheduled_start_time_ms": 1767301200000,
+  "scheduled_end_time_ms": 1767302745925,
+  "participants": [
+    {
+      "name": "Alison Barker",
+      "email": "alison.barker@read.ai",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "Eliab Sisay",
+      "email": "eliab.sisay@read.ai",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "Kelcey Hawthorne",
+      "email": "kelcey.hawthorne@read.ai",
+      "invited": true,
+      "attended": true
+    },
+    {
+      "name": "Zoe Robinson",
+      "email": "zoe@read.ai",
+      "invited": true,
+      "attended": true
+    }
+  ],
+  "owner": {
+    "name": "Alison Barker",
+    "email": "alison.barker@read.ai"
+  },
+  "title": "Onboarding to Read AI - Sample Report",
+  "report_url": "https://app.read.ai/analytics/meetings/01KDRNJD1KAG9RTPDJWED2V1DH",
+  "platform": "meet",
+  "platform_id": "eyn-fbdd-riz",
+  "folders": [
+    "Sample Reports - Read AI"
+  ],
+  "live_enabled": false,
+  "access_level": "viewer_full",
+  "summary": "The meeting was an onboarding session for Read AI, aimed at getting the attendees set up with account settings, integrations, and the dashboard. Alison Barker led the briefing, covering how to connect calendars and configure join and distribution options. She explained that Read can automatically join all calendar events by default, with the ability to turn it off for specific meetings or when hosting only, and that it can be removed from a meeting in progress if needed. On distribution, Read can automatically send meeting notes to participants after the call, with an external-participant toggle to prevent sharing with partners or customers.\n\nThe discussion then moved to integrations and Search Copilot. The team emphasized connecting other platforms (notably HubSpot and Salesforce) so Read can surface ongoing deals and automatically push notes to CRMs. They demonstrated Search Copilot, which searches across meetings, email, and documents and returns cited results, limited by user permissions. Attendees were shown where Meeting reports live (the reports page) and how to organize them into folders for easy sharing or later review.\n\nToward the end, the participants discussed team visibility and follow-up actions. Zoe expressed interest in a way to see her entire team's meeting reports, and Kelcey indicated a separate call could be arranged to discuss workspace capabilities and reporting access. Action items include Kelcey sending documentation on removing Read AI from a meeting and on creating shared folders for call reports, and scheduling the next discussion. The session also highlighted the support widget and the Help Center content accessible via Search Copilot.",
+  "chapter_summaries": [
+    {
+      "title": "Read AI Onboarding Essentials",
+      "description": "Alison and the team introduced Read AI's onboarding process, covering how to connect calendars, access account settings, and manage integrations. They explained join and distribution settings: Read AI can auto-join all calendar events by default, with options to toggle per meeting and to limit automatic sharing of notes to internal participants. The team demonstrated how to connect additional platforms (notably CRM like HubSpot or Salesforce) to enable Search Copilot and auto-push meeting notes. They showed where to find meeting reports, organize them in folders, and how to share or restrict access during testing."
+    },
+    {
+      "title": "Exploring Search Copilot Capabilities",
+      "description": "Kelcey and Alison demonstrate Search Copilot, highlighting how it can search across meetings, emails, Slack, Drive, and Teams to surface insights, with citations to trace back results. They note that results respect permissions and only search content the user has access to. The team discusses practical use cases, such as summarizing customer interviews and drafting follow-up communications, and how to share findings with teammates through folders. They point attendees to account settings and the support widget, with promises of sending follow-up documentation."
+    }
+  ],
+  "action_items": [
+    "Kelcey Hawthorne will send documentation after the call to show how to remove Read AI from a meeting.",
+    "Kelcey Hawthorne will send documentation on how to create a shared folder for customer interview call reports.",
+    "Kelcey Hawthorne will provide availability to schedule a separate call to discuss workspace team reporting.",
+    "Kelcey Hawthorne will follow up with additional materials after the session."
+  ],
+  "key_questions": [
+    "What options exist to remove Read AI from a meeting if participants are uncomfortable with AI note taking?",
+    "How to disable automatic sharing of Meeting notes to external participants?"
+  ],
+  "topics": [
+    "Join settings and default behavior for Read AI",
+    "Automatic sharing of meeting notes to participants",
+    "Integrations enable Search Copilot across meetings",
+    "Search Copilot overview with cross-source citations",
+    "Permission-based search scope ensures access-controlled results"
+  ],
+  "transcript": {
+    "speakers": [
+      {
+        "name": "Alison Barker"
+      },
+      {
+        "name": "Eliab Sisay"
+      },
+      {
+        "name": "Kelcey Hawthorne"
+      },
+      {
+        "name": "Zoe Robinson"
+      }
+    ],
+    "turns": [
+      {
+        "start_time_ms": 1767134739651,
+        "end_time_ms": 1767134741194,
+        "speaker": {
+          "name": "Eliab Sisay"
+        },
+        "text": "Bye, everyone."
+      },
+      {
+        "start_time_ms": 1767134737163,
+        "end_time_ms": 1767134739631,
+        "speaker": {
+          "name": "Eliab Sisay"
+        },
+        "text": "Thanks, Kelcey. Thanks, Alison. This was awesome. Appreciate your time."
+      },
+      {
+        "start_time_ms": 1767134735408,
+        "end_time_ms": 1767134736569,
+        "speaker": {
+          "name": "Zoe Robinson"
+        },
+        "text": "This is great. Thank you so much."
+      },
+      {
+        "start_time_ms": 1767134731024,
+        "end_time_ms": 1767134734407,
+        "speaker": {
+          "name": "Kelcey Hawthorne"
+        },
+        "text": "And I have some follow up to send over, so I will be in touch with you guys shortly."
+      },
+      {
+        "start_time_ms": 1767134675017,
+        "end_time_ms": 1767134730003,
+        "speaker": {
+          "name": "Alison Barker"
+        },
+        "text": "That's correct. And it respects your permission. So we'll only search across things that you have access to. So for example, just because and Zoe, you're both using Read, you're not going to be able to search through Zoe's email. You'll only search what you have access to and what you've given Read access to. All right. So I know we're coming up on time. So I just want to point out a couple more things. Reminder, if you need to update any of your account settings, you can do so by going to your name in the bottom left and clicking on account settings. Also, if you need to get in touch with our support team for any reason, you have questions about a Meeting report or how to use Read, you can do that by clicking on the support widget on the right hand side. We've loaded all of our Help Center content into Search Copilot, so you can use Search Copilot as a support resource as well. So yeah, thank you so much for joining us today. We hope that you enjoy testing out Read."
+      },
+      {
+        "start_time_ms": 1767134655420,
+        "end_time_ms": 1767134674056,
+        "speaker": {
+          "name": "Eliab Sisay"
+        },
+        "text": "really cool. Actually, I can see myself playing around with this and it being useful for summarizing themes across customer interviews I've conducted. If I'm tracking this correctly, the answers for from this for the Search Copilot are pulled from the integrations that you talked about earlier, and all of our Meeting reports. Is that correct?"
+      },
+      {
+        "start_time_ms": 1767134642361,
+        "end_time_ms": 1767134652449,
+        "speaker": {
+          "name": "Kelcey Hawthorne"
+        },
+        "text": "And for me, being on the CS team here at Reed, I love using Search Copilot to help me answer client questions or drop follow-up emails and many more."
+      },
+      {
+        "start_time_ms": 1767134595892,
+        "end_time_ms": 1767134640820,
+        "speaker": {
+          "name": "Alison Barker"
+        },
+        "text": "So now let's take a look at Search Copilot. You can see there's this search bar up here, there's also a dedicated page for Search Copilot. I actually preloaded an example here. I manage a team. I can't be in every single one of their calls, but sometimes I do need to pull out insights from their calls or just multiple of my meetings. So I asked here, what do customers like about Read to get insights on what customers have been saying? And you can see that Search Copilot compiled an answer for me that pulled in from Slack, from Google Drive, from Teams meetings, so it saves me a bunch of time. I didn't have to look at all these sources separately to compile this information. There's also citations, so I can go back and look at these specific meetings or documents if I need more details."
+      },
+      {
+        "start_time_ms": 1767134590190,
+        "end_time_ms": 1767134591231,
+        "speaker": {
+          "name": "Zoe Robinson"
+        },
+        "text": "Thank you."
+      },
+      {
+        "start_time_ms": 1767134568364,
+        "end_time_ms": 1767134589250,
+        "speaker": {
+          "name": "Kelcey Hawthorne"
+        },
+        "text": "Read provides a way to set this up. In a workspace, I can send over some availability so we can set up a separate call to talk about that a little bit more. We'd love to understand your use case a bit more so that we can recommend kind of the best settings for the workspace and give us a bit more time to walk through all the available options that the workspace can provide."
+      },
+      {
+        "start_time_ms": 1767134560600,
+        "end_time_ms": 1767134567057,
+        "speaker": {
+          "name": "Zoe Robinson"
+        },
+        "text": "I'm wondering, as a team manager, is there a way that I can see all my team's Meeting reports?"
+      },
+      {
+        "start_time_ms": 1767134560159,
+        "end_time_ms": 1767134560600,
+        "speaker": {
+          "name": "Zoe Robinson"
+        },
+        "text": "That's great."
+      },
+      {
+        "start_time_ms": 1767134551795,
+        "end_time_ms": 1767134558542,
+        "speaker": {
+          "name": "Kelcey Hawthorne"
+        },
+        "text": "Yeah, awesome. You can do that by creating a shared folder for those call reports. I can send you some documentation on that as well."
+      },
+      {
+        "start_time_ms": 1767134544192,
+        "end_time_ms": 1767134550975,
+        "speaker": {
+          "name": "Eliab Sisay"
+        },
+        "text": "Oh, that's cool. I'd love to be able to share customer interview calls that I have with the rest of our product team."
+      },
+      {
+        "start_time_ms": 1767134495118,
+        "end_time_ms": 1767134544171,
+        "speaker": {
+          "name": "Alison Barker"
+        },
+        "text": "So once you have your account set up, the first thing I'd recommend doing is going to your calendar page and you should see add Read toggled on for a lot of meetings here since that's what your account settings have determined. If you do want to toggle Read off for a specific Meeting, like let's say, you know, your client doesn't like to record meetings, you can just toggle that off here. If it's a recurring Meeting, you can toggle it off for all meetings at once. And same thing if Read is toggled off for a Meeting, you can just toggle Read on and Read will try and join that Meeting on your behalf automatically. So now that you know how to add Read to meetings, you can find your Meeting reports under this reports page where all your reports will live. You can search, you can filter, you can also organize reports into folders to organize and make them easy to find."
+      },
+      {
+        "start_time_ms": 1767134490077,
+        "end_time_ms": 1767134492137,
+        "speaker": {
+          "name": "Eliab Sisay"
+        },
+        "text": "Yeah, that's cool. I'm sure our sales team would love that."
+      },
+      {
+        "start_time_ms": 1767134469283,
+        "end_time_ms": 1767134489176,
+        "speaker": {
+          "name": "Alison Barker"
+        },
+        "text": "Yeah, I definitely recommend connecting your CRM if you use HubSpot or Salesforce. This will allow you to get information on ongoing deals or different types of clients that you might be working with. Also, I know that salespeople often hate doing admin work, so this will allow them to automatically push Meeting notes to HubSpot. Spotter Salesforce as well."
+      },
+      {
+        "start_time_ms": 1767134463741,
+        "end_time_ms": 1767134468182,
+        "speaker": {
+          "name": "Eliab Sisay"
+        },
+        "text": "I'm curious, for companies like us, what integrations do you see them connect the most?"
+      },
+      {
+        "start_time_ms": 1767134392986,
+        "end_time_ms": 1767134461260,
+        "speaker": {
+          "name": "Alison Barker"
+        },
+        "text": "Yeah, got it. No problem. So for that, you'll just want to toggle off external participant access. And with that toggled off, now Read will only send out the Meeting notes to internal participants automatically. You can always go to the Meeting report later once you review and you can manually share with external participants there if you'd like to. Next section I want to touch on is an integration section. So again, this is where you can connect all your calendars. I would also recommend connecting any other platforms that you use to Read. And the main reason for this is because of Search Copilot, which is our AI-powered search and discovery engine. And you can think of it as like chat GPT. But for your work. But that will allow Read to search across your meetings as well as any other content you have connected to Read, for example like your email. So one thing that people use Search Copilot a lot for is they want to get an update on the status of an ongoing project and you'll get the best most comprehensive answers if Read is able to give you that answer by searching across your meetings, your email, your messenger, anywhere else that you might be talking about that project."
+      },
+      {
+        "start_time_ms": 1767134381502,
+        "end_time_ms": 1767134392245,
+        "speaker": {
+          "name": "Zoe Robinson"
+        },
+        "text": "I love that. My only thing is during this testing phase, we shouldn't be sending out recaps automatically to partners or customers without at least reviewing the notes first. So can you tell us how to do that?"
+      },
+      {
+        "start_time_ms": 1767134355357,
+        "end_time_ms": 1767134379440,
+        "speaker": {
+          "name": "Alison Barker"
+        },
+        "text": "Thanks, Kelcey. All right. Next, I want to look at distribution settings, which is under report sharing here. And you'll see that you can edit sharing preferences for internal and external participants. So what Read can do is it can automatically send Meeting notes out to Meeting participants on your behalf once the call is over. So this is a big time saver if you're someone that usually types up a Meeting summary and sends it to everyone after the call."
+      },
+      {
+        "start_time_ms": 1767134339149,
+        "end_time_ms": 1767134352015,
+        "speaker": {
+          "name": "Kelcey Hawthorne"
+        },
+        "text": "Yeah, it's easy to remove Read AI from a Meeting in progress. Options can vary slightly depending on your Meeting platform. So I can send you some documentation after the call to show you how to remove Read AI. From a Meeting if needed."
+      },
+      {
+        "start_time_ms": 1767134328243,
+        "end_time_ms": 1767134338309,
+        "speaker": {
+          "name": "Eliab Sisay"
+        },
+        "text": "So just a quick question. If I have that setting and Read AI joins a call I have with a customer and the customer is uncomfortable with AI note takers, is there an option to remove Read AI?"
+      },
+      {
+        "start_time_ms": 1767134255632,
+        "end_time_ms": 1767134327022,
+        "speaker": {
+          "name": "Alison Barker"
+        },
+        "text": "Looking forward to working with you both. All right. So the first thing you probably did when you created your account was to connect your calendar to Read. If you did not do that for some reason, then you can go to your integrations page and connect your calendar here. This will sync your calendar details to Read so Read can join meetings on your behalf. You might have seen that it asked you about some important settings like your join preferences and your distribution settings. I just want to touch on those again because they're pretty key settings. So you can find those settings and any other Read account settings by going to your name in the left-hand corner and then clicking on account settings. The join settings are under Meeting RECORDING. And by default, we recommend that Read is set to join all calendar events. However, you can always toggle Read off for specific meetings from your calendar page, which we'll show you in a second. If you do want to start with a more conservative approach, you can choose to have Read be on by default just for calendar events that you're hosting, for example. You can also turn auto join off and manually select the meetings that But for now, I'll leave this as rejoining all calendar events."
+      },
+      {
+        "start_time_ms": 1767134251650,
+        "end_time_ms": 1767134253191,
+        "speaker": {
+          "name": "Eliab Sisay"
+        },
+        "text": "I'm Eliab. I'm on Zoe's team."
+      },
+      {
+        "start_time_ms": 1767134249289,
+        "end_time_ms": 1767134251270,
+        "speaker": {
+          "name": "Zoe Robinson"
+        },
+        "text": "Hi everyone."
+      },
+      {
+        "start_time_ms": 1767134241287,
+        "end_time_ms": 1767134249268,
+        "speaker": {
+          "name": "Zoe Robinson"
+        },
+        "text": "I can go next. I'm Zoe and I manage the product team at Acme and my team is going to be the first ones testing out Read for the organization."
+      },
+      {
+        "start_time_ms": 1767134230364,
+        "end_time_ms": 1767134239846,
+        "speaker": {
+          "name": "Kelcey Hawthorne"
+        },
+        "text": "Yeah, I can go first. Hi, everyone. I'm Kelcey, and I'm on the CS team here at Read alongside Alison. I'm happy to answer any questions you might have about how to use Read."
+      },
+      {
+        "start_time_ms": 1767134214861,
+        "end_time_ms": 1767134229444,
+        "speaker": {
+          "name": "Alison Barker"
+        },
+        "text": "Welcome to your introductory session on Read AI. I'm Alison. I'll be guiding you through your account settings, integrations, the dashboard, and where to get help so you're set up for success. I'll go ahead and share my screen while I'm getting that set up. Would everyone else on the call like to introduce themselves?"
+      }
+    ],
+    "text": "[Alison Barker]: Welcome to your introductory session on Read AI. I'm Alison. I'll be guiding you through your account settings, integrations, the dashboard, and where to get help so you're set up for success. I'll go ahead and share my screen while I'm getting that set up. Would everyone else on the call like to introduce themselves?\n[Kelcey Hawthorne]: Yeah, I can go first. Hi, everyone. I'm Kelcey, and I'm on the CS team here at Read alongside Alison. I'm happy to answer any questions you might have about how to use Read.\n[Zoe Robinson]: I can go next. I'm Zoe and I manage the product team at Acme and my team is going to be the first ones testing out Read for the organization.\n[Zoe Robinson]: Hi everyone.\n[Eliab Sisay]: I'm Eliab. I'm on Zoe's team.\n[Alison Barker]: Looking forward to working with you both. All right. So the first thing you probably did when you created your account was to connect your calendar to Read. If you did not do that for some reason, then you can go to your integrations page and connect your calendar here. This will sync your calendar details to Read so Read can join meetings on your behalf. You might have seen that it asked you about some important settings like your join preferences and your distribution settings. I just want to touch on those again because they're pretty key settings. So you can find those settings and any other Read account settings by going to your name in the left-hand corner and then clicking on account settings. The join settings are under Meeting RECORDING. And by default, we recommend that Read is set to join all calendar events. However, you can always toggle Read off for specific meetings from your calendar page, which we'll show you in a second. If you do want to start with a more conservative approach, you can choose to have Read be on by default just for calendar events that you're hosting, for example. You can also turn auto join off and manually select the meetings that But for now, I'll leave this as rejoining all calendar events.\n[Eliab Sisay]: So just a quick question. If I have that setting and Read AI joins a call I have with a customer and the customer is uncomfortable with AI note takers, is there an option to remove Read AI?\n[Kelcey Hawthorne]: Yeah, it's easy to remove Read AI from a Meeting in progress. Options can vary slightly depending on your Meeting platform. So I can send you some documentation after the call to show you how to remove Read AI. From a Meeting if needed.\n[Alison Barker]: Thanks, Kelcey. All right. Next, I want to look at distribution settings, which is under report sharing here. And you'll see that you can edit sharing preferences for internal and external participants. So what Read can do is it can automatically send Meeting notes out to Meeting participants on your behalf once the call is over. So this is a big time saver if you're someone that usually types up a Meeting summary and sends it to everyone after the call.\n[Zoe Robinson]: I love that. My only thing is during this testing phase, we shouldn't be sending out recaps automatically to partners or customers without at least reviewing the notes first. So can you tell us how to do that?\n[Alison Barker]: Yeah, got it. No problem. So for that, you'll just want to toggle off external participant access. And with that toggled off, now Read will only send out the Meeting notes to internal participants automatically. You can always go to the Meeting report later once you review and you can manually share with external participants there if you'd like to. Next section I want to touch on is an integration section. So again, this is where you can connect all your calendars. I would also recommend connecting any other platforms that you use to Read. And the main reason for this is because of Search Copilot, which is our AI-powered search and discovery engine. And you can think of it as like chat GPT. But for your work. But that will allow Read to search across your meetings as well as any other content you have connected to Read, for example like your email. So one thing that people use Search Copilot a lot for is they want to get an update on the status of an ongoing project and you'll get the best most comprehensive answers if Read is able to give you that answer by searching across your meetings, your email, your messenger, anywhere else that you might be talking about that project.\n[Eliab Sisay]: I'm curious, for companies like us, what integrations do you see them connect the most?\n[Alison Barker]: Yeah, I definitely recommend connecting your CRM if you use HubSpot or Salesforce. This will allow you to get information on ongoing deals or different types of clients that you might be working with. Also, I know that salespeople often hate doing admin work, so this will allow them to automatically push Meeting notes to HubSpot. Spotter Salesforce as well.\n[Eliab Sisay]: Yeah, that's cool. I'm sure our sales team would love that.\n[Alison Barker]: So once you have your account set up, the first thing I'd recommend doing is going to your calendar page and you should see add Read toggled on for a lot of meetings here since that's what your account settings have determined. If you do want to toggle Read off for a specific Meeting, like let's say, you know, your client doesn't like to record meetings, you can just toggle that off here. If it's a recurring Meeting, you can toggle it off for all meetings at once. And same thing if Read is toggled off for a Meeting, you can just toggle Read on and Read will try and join that Meeting on your behalf automatically. So now that you know how to add Read to meetings, you can find your Meeting reports under this reports page where all your reports will live. You can search, you can filter, you can also organize reports into folders to organize and make them easy to find.\n[Eliab Sisay]: Oh, that's cool. I'd love to be able to share customer interview calls that I have with the rest of our product team.\n[Kelcey Hawthorne]: Yeah, awesome. You can do that by creating a shared folder for those call reports. I can send you some documentation on that as well.\n[Zoe Robinson]: That's great.\n[Zoe Robinson]: I'm wondering, as a team manager, is there a way that I can see all my team's Meeting reports?\n[Kelcey Hawthorne]: Read provides a way to set this up. In a workspace, I can send over some availability so we can set up a separate call to talk about that a little bit more. We'd love to understand your use case a bit more so that we can recommend kind of the best settings for the workspace and give us a bit more time to walk through all the available options that the workspace can provide.\n[Zoe Robinson]: Thank you.\n[Alison Barker]: So now let's take a look at Search Copilot. You can see there's this search bar up here, there's also a dedicated page for Search Copilot. I actually preloaded an example here. I manage a team. I can't be in every single one of their calls, but sometimes I do need to pull out insights from their calls or just multiple of my meetings. So I asked here, what do customers like about Read to get insights on what customers have been saying? And you can see that Search Copilot compiled an answer for me that pulled in from Slack, from Google Drive, from Teams meetings, so it saves me a bunch of time. I didn't have to look at all these sources separately to compile this information. There's also citations, so I can go back and look at these specific meetings or documents if I need more details.\n[Kelcey Hawthorne]: And for me, being on the CS team here at Reed, I love using Search Copilot to help me answer client questions or drop follow-up emails and many more.\n[Eliab Sisay]: really cool. Actually, I can see myself playing around with this and it being useful for summarizing themes across customer interviews I've conducted. If I'm tracking this correctly, the answers for from this for the Search Copilot are pulled from the integrations that you talked about earlier, and all of our Meeting reports. Is that correct?\n[Alison Barker]: That's correct. And it respects your permission. So we'll only search across things that you have access to. So for example, just because and Zoe, you're both using Read, you're not going to be able to search through Zoe's email. You'll only search what you have access to and what you've given Read access to. All right. So I know we're coming up on time. So I just want to point out a couple more things. Reminder, if you need to update any of your account settings, you can do so by going to your name in the bottom left and clicking on account settings. Also, if you need to get in touch with our support team for any reason, you have questions about a Meeting report or how to use Read, you can do that by clicking on the support widget on the right hand side. We've loaded all of our Help Center content into Search Copilot, so you can use Search Copilot as a support resource as well. So yeah, thank you so much for joining us today. We hope that you enjoy testing out Read.\n[Kelcey Hawthorne]: And I have some follow up to send over, so I will be in touch with you guys shortly.\n[Zoe Robinson]: This is great. Thank you so much.\n[Eliab Sisay]: Thanks, Kelcey. Thanks, Alison. This was awesome. Appreciate your time.\n[Eliab Sisay]: Bye, everyone."
+  },
+  "metrics": {
+    "read_score": 88.7733771594566,
+    "sentiment": 84.92288133133783,
+    "engagement": 92.62387298757535
+  },
+  "recording_download": {
+    "url": "https://readai-recordings-production.s3.amazonaws.com/packaged/01KDRNJD1KAG9RTPDJWED2V1DH/01KDRPGEMQG5893BE971H204WW/stream_0/vod.mp4?response-content-disposition=attachment%3B%20filename%3D%22meeting-01KDRNJD1KAG9RTPDJWED2V1DH.mp4%22&AWSAccessKeyId=ASIAQHPXVOFLYZWFB54Z&Signature=eu04sSbHhxqrFutG0T07VOlhnCo%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIH4SB2QQb3Yy7FKBAe2e43SWSqT6hYk%2BHs7UjAlZtq6KAiA%2BK7GTuGIan7YuLz3i6ZecpbPH9PmF0cobyurtN8JtKir9AwhREAIaDDAxNjA4ODY1ODI2MyIMCOiXT5MvgnveGRHYKtoDgAjkynCzoTb9S2fnFkksd94qcZlK9EI%2F9zcrlNqllIKRjYEubUnKG3HKrb1ngVdnYIDgXzLsXlb%2BO0V%2BnGBOFya%2FqfHbcrqGx8W3UimmyO6A6jA3EEry7kwaGPPLz6QNHinT1vuyFzgFqP%2B9aRyv82a5rBVUkyVyVZRqOWuTzQ%2BlJxUJjXu82NPxVEU8lKVQnmaRxTSSlwPE3cadXP2RWxyRvcskK5gU3sVYzabgGcZb8nRVHNrGZwE904N2w%2FuONVffZ64olHGWWPBKlqAygfn64c977lAr2GkyjVVbIp4adQ1oY3%2F9A%2BtKtGZWRicuPaP0Ap0HLmARilXIuVIcl1pf8oVCicDp8wA4Kax618niEPRon5h%2Fj8JgZVXlt%2FknyiCJ0Moy5x2R2wxU16VlqUM4wJRSU%2BeUCF%2Bf2D1d03FaMC2CLL%2BZuJeZ%2FsCWkl14xOZMSALOZJIMW90PG%2B8%2F%2Fx8U6ZShUfs9KKgJylzZPSPhegeHuAceMBs92HmiGJd76Rx%2BODuO0rp%2FS5QydeOvoKzCQVBRUoRlV8QPzHf9YqS1yuB3iLseU7vv4RX4SggX%2BcNGyuG%2FGdC%2FKV2n6HQm42TzbxxI%2BdYiDdeI2r4IFqYK5XsyK8c8IRleMP3VxtQGOqYBYhZ0dSZ0twiPs1Dwj4K9Qv0aFYWOTVG0cpIP6P%2Fh%2BX61I03JRNml22KBHTfuj69Z1znJ4mn5Jna%2BHJnn2HEhrIyotJcWQHG%2BGv9lQIxDpDfS8MjY3HWWi%2ByETWvR1lc38l6kPHMV8xJtjUZTglFkHJtoN5EQpWogLgB8gPGLslP0ojOG8fwF36g0yZeIIeyS5ZQsvE4cCs0mz58ImfYDVZXYHNeRqQ%3D%3D&Expires=1787952324",
+    "expires_in": 3600
+  }
+}
