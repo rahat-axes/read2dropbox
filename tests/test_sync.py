@@ -36,7 +36,9 @@ class FakeRead:
         self._fail_ids = set(fail_ids)
         self.get_calls: list[str] = []
 
-    def list_meetings(self):
+    def list_meetings(self, *, start_time_ms=None):
+        if start_time_ms is not None:
+            return [m for m in self._meetings if m["start_time_ms"] >= start_time_ms]
         return list(self._meetings)
 
     def get_meeting(self, meeting_id, **kw):

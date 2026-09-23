@@ -141,6 +141,7 @@ def sync(
     root: str = DEFAULT_ROOT,
     state_path: Optional[Path] = None,
     full: bool = False,
+    start_time_ms: Optional[int] = None,
     logger: Optional[Callable[[str], None]] = None,
 ) -> SyncResult:
     """Export meetings to Dropbox, incrementally by default.
@@ -152,6 +153,8 @@ def sync(
         state_path: where the incremental state lives; defaults to
             ``config.state_path()``.
         full: re-upload every meeting, ignoring stored timestamps.
+        start_time_ms: if set, only consider meetings at/after this epoch-ms
+            cutoff (server-side filter — powers the CLI's ``--days``).
         logger: optional sink for per-meeting progress lines.
     """
     state_path = state_path or config.state_path()
@@ -163,7 +166,7 @@ def sync(
         if logger is not None:
             logger(msg)
 
-    for summary in read.list_meetings():
+    for summary in read.list_meetings(start_time_ms=start_time_ms):
         meeting_id = summary.get("id")
         if not meeting_id:
             continue
@@ -206,6 +209,7 @@ def run_sync(
     root: str = DEFAULT_ROOT,
     state_path: Optional[Path] = None,
     full: bool = False,
+    start_time_ms: Optional[int] = None,
     logger: Optional[Callable[[str], None]] = None,
 ) -> SyncResult:
     """Convenience wrapper: build real clients from stored auth, then :func:`sync`."""
@@ -219,5 +223,6 @@ def run_sync(
         root=root,
         state_path=state_path,
         full=full,
+        start_time_ms=start_time_ms,
         logger=logger,
     )
