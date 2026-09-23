@@ -76,7 +76,7 @@ def test_markdown_real_string_lists_render(real):
     assert md.startswith("# Onboarding to Read AI - Sample Report")
     assert "## Action Items" in md
     # Real action_items are plain strings -> checkbox line, no crash, no assignee.
-    assert "- [ ] Kelcey Hawthorne will send documentation" in md
+    assert "- [ ] Karen Holt will send documentation" in md
     assert "## Key Questions" in md
     assert "## Topics" in md
     # Real chapters use `description`.
@@ -86,7 +86,7 @@ def test_markdown_real_string_lists_render(real):
 
 def test_markdown_transcript_speaker_lines(real):
     md = to_markdown(real)
-    assert "**Eliab Sisay:** Bye, everyone." in md
+    assert "**Evan Shaw:** Bye, everyone." in md
 
 
 def test_markdown_ends_with_single_newline(real, synthetic):

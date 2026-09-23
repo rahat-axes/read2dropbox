@@ -11,33 +11,33 @@
       "scheduled_end_time_ms": 1767302745925,
       "participants": [
         {
-          "name": "Alison Barker",
-          "email": "alison.barker@read.ai",
+          "name": "Alice Bennett",
+          "email": "alice.bennett@example.com",
           "invited": true,
           "attended": true
         },
         {
-          "name": "Eliab Sisay",
-          "email": "eliab.sisay@read.ai",
+          "name": "Evan Shaw",
+          "email": "evan.shaw@example.com",
           "invited": true,
           "attended": true
         },
         {
-          "name": "Kelcey Hawthorne",
-          "email": "kelcey.hawthorne@read.ai",
+          "name": "Karen Holt",
+          "email": "karen.holt@example.com",
           "invited": true,
           "attended": true
         },
         {
-          "name": "Zoe Robinson",
-          "email": "zoe@read.ai",
+          "name": "Robin Reyes",
+          "email": "robin@example.com",
           "invited": true,
           "attended": true
         }
       ],
       "owner": {
         "name": "Read AI",
-        "email": "support@read.ai"
+        "email": "support@example.com"
       },
       "title": "Onboarding to Read AI - Sample Report",
       "report_url": "https://app.read.ai/analytics/meetings/01KDRNJD1KAG9RTPDJWED2V1DH",
@@ -54,30 +54,30 @@
       "end_time_ms": 1767297854881,
       "participants": [
         {
-          "name": "Julia Davis",
+          "name": "Logan Gray",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Kelly Gorrell",
-          "email": "kelly.gorrell@read.ai",
+          "name": "Morgan Jordan",
+          "email": "nina.grant@example.com",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Layla Airola",
+          "name": "Noel Avery",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Vasim Patel",
+          "name": "Yael Sage",
           "invited": false,
           "attended": true
         }
       ],
       "owner": {
         "name": "Read AI",
-        "email": "support@read.ai"
+        "email": "support@example.com"
       },
       "title": "Using a Meeting Report - Sample Report",
       "report_url": "https://app.read.ai/analytics/meetings/01KD42W96QHMPZMHGSFRJ2F5H3",
@@ -94,30 +94,30 @@
       "end_time_ms": 1767294511573,
       "participants": [
         {
-          "name": "Ben Hennessy",
-          "email": "ben.hennessy@read.ai",
+          "name": "Devin Kai",
+          "email": "brian.carter@example.com",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Matt Swett",
+          "name": "Owen Vale",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Meredith Darnell",
+          "name": "Quinn Finley",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Taylor Argens",
+          "name": "Wren Casey",
           "invited": false,
           "attended": true
         }
       ],
       "owner": {
         "name": "Read AI",
-        "email": "support@read.ai"
+        "email": "support@example.com"
       },
       "title": "Try Out Search Copilot - Sample Report",
       "report_url": "https://app.read.ai/analytics/meetings/01KD65H7TWZ10T2KJTMJ3VFQQ9",
@@ -134,30 +134,30 @@
       "end_time_ms": 1767290666970,
       "participants": [
         {
-          "name": "Ben Hennessy",
-          "email": "ben.hennessy@read.ai",
+          "name": "Devin Kai",
+          "email": "brian.carter@example.com",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Julia Davis",
+          "name": "Logan Gray",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Mike Bolton",
+          "name": "Riley Ellis",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Sarah Spagnolo",
+          "name": "Tatum Uma",
           "invited": false,
           "attended": true
         }
       ],
       "owner": {
         "name": "Read AI",
-        "email": "support@read.ai"
+        "email": "support@example.com"
       },
       "title": "Desktop and Mobile App Walkthrough - Sample Report",
       "report_url": "https://app.read.ai/analytics/meetings/01KD62407STV70TW8GX5DA8S7E",
@@ -174,30 +174,30 @@
       "end_time_ms": 1767287364947,
       "participants": [
         {
-          "name": "Alison Barker",
-          "email": "alison.barker@read.ai",
+          "name": "Alice Bennett",
+          "email": "alice.bennett@example.com",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Anna Fang",
+          "name": "Blake Harper",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Megan Gibson",
+          "name": "Parker Iris",
           "invited": false,
           "attended": true
         },
         {
-          "name": "Sarah Spagnolo",
+          "name": "Tatum Uma",
           "invited": false,
           "attended": true
         }
       ],
       "owner": {
         "name": "Read AI",
-        "email": "support@read.ai"
+        "email": "support@example.com"
       },
       "title": "Explore Real World Use Cases - Sample Report",
       "report_url": "https://app.read.ai/analytics/meetings/01KDNM4YFCM2PAW00NYMKM0WZ1",

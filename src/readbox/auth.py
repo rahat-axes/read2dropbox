@@ -149,7 +149,12 @@ def register_read_client(
     client_id = data.get("client_id")
     client_secret = data.get("client_secret")
     if not client_id or not client_secret:
-        raise AuthError(f"registration response missing credentials: {data}")
+        # Report only the keys returned, never their values — the body may carry
+        # a client_secret we must not leak into logs or stderr.
+        raise AuthError(
+            f"registration response missing credentials (got keys: "
+            f"{sorted(data)})"
+        )
     return {"client_id": client_id, "client_secret": client_secret}
 
 
@@ -238,7 +243,11 @@ def _merge_token_response(
     """Fold an OAuth token response into the stored credential dict."""
     access_token = data.get("access_token")
     if not access_token:
-        raise AuthError(f"token response missing access_token: {data}")
+        # Report only the keys returned, never their values — the body may carry
+        # a rotated refresh_token we must not leak into logs or stderr.
+        raise AuthError(
+            f"token response missing access_token (got keys: {sorted(data)})"
+        )
 
     updated = dict(creds)
     updated["access_token"] = access_token
