@@ -77,10 +77,23 @@ def state_file(tmp_path):
 # -- path building -----------------------------------------------------------
 
 
-def test_dropbox_paths_uses_year_month_and_sanitized_title():
-    md, js = dropbox_paths(MEETINGS[0], root="Read AI")
+def test_dropbox_paths_default_layout():
+    md, js = dropbox_paths(MEETINGS[0])
     assert md == "/Read AI/2026/08/2026-08-21 Engineering Sync.md"
     assert js == "/Read AI/2026/08/2026-08-21 Engineering Sync.json"
+
+
+def test_dropbox_paths_honors_custom_settings():
+    from readbox.config import Settings
+
+    settings = Settings(
+        root_folder="Meetings",
+        folder_template="{year}",
+        filename_template="{title} ({date})",
+        date_format="%d %b %Y",
+    )
+    md, _ = dropbox_paths(MEETINGS[0], settings)
+    assert md == "/Meetings/2026/Engineering Sync (21 Aug 2026).md"
 
 
 # -- full sync ---------------------------------------------------------------

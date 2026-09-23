@@ -191,6 +191,41 @@ def test_status_flags_missing_auth(monkeypatch, tmp_path):
     assert "Synced meetings tracked: 0" in result.output
 
 
+# -- config ------------------------------------------------------------------
+
+
+def test_config_show_lists_settings(monkeypatch, tmp_path):
+    monkeypatch.setattr(cli.config, "settings_path", lambda: tmp_path / "settings.json")
+    result = runner.invoke(cli.app, ["config"])
+    assert result.exit_code == 0
+    assert "root_folder = Read AI" in result.output
+    assert "Example path:" in result.output
+
+
+def test_config_set_persists_value(monkeypatch, tmp_path):
+    path = tmp_path / "settings.json"
+    monkeypatch.setattr(cli.config, "settings_path", lambda: path)
+    result = runner.invoke(cli.app, ["config", "root_folder", "Meetings"])
+    assert result.exit_code == 0
+    assert "root_folder = Meetings" in result.output
+    assert cli.config.load_settings(path).root_folder == "Meetings"
+
+
+def test_config_rejects_unknown_key(monkeypatch, tmp_path):
+    monkeypatch.setattr(cli.config, "settings_path", lambda: tmp_path / "settings.json")
+    result = runner.invoke(cli.app, ["config", "bogus", "x"])
+    assert result.exit_code == 1
+
+
+def test_config_rejects_invalid_template(monkeypatch, tmp_path):
+    path = tmp_path / "settings.json"
+    monkeypatch.setattr(cli.config, "settings_path", lambda: path)
+    # Unbalanced brace → malformed template → rejected, nothing written.
+    result = runner.invoke(cli.app, ["config", "filename_template", "{title"])
+    assert result.exit_code == 1
+    assert not path.exists()
+
+
 # -- help --------------------------------------------------------------------
 
 

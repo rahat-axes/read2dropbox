@@ -22,6 +22,12 @@ from typing import Any, Optional
 # plus ASCII control chars, get replaced.
 _ILLEGAL_FILENAME_CHARS = re.compile(r'[<>:"/\\|?*\x00-\x1f]')
 
+# Default output templates (Phase 7 makes these configurable via config.Settings;
+# these constants keep the pre-Phase-7 behavior as the zero-config default).
+DEFAULT_DATE_FORMAT = "%Y-%m-%d"
+DEFAULT_FILENAME_TEMPLATE = "{date} {title}"
+DEFAULT_FOLDER_TEMPLATE = "{year}/{month}"
+
 
 # -- small field extractors ---------------------------------------------------
 
@@ -209,12 +215,77 @@ def to_json(meeting: dict) -> str:
     return json.dumps(meeting, indent=2, ensure_ascii=False) + "\n"
 
 
-def filename_for(meeting: dict) -> str:
-    """Return a ``YYYY-MM-DD Title`` stem (no extension), sanitized for disk."""
+class _SafeTokens(dict):
+    """Format map that renders unknown ``{tokens}`` as empty instead of raising."""
+
+    def __missing__(self, key: str) -> str:
+        return ""
+
+
+def _tokens(meeting: dict, date_format: str) -> _SafeTokens:
     start = _ms_to_utc(meeting.get("start_time_ms"))
-    date = start.strftime("%Y-%m-%d") if start else "0000-00-00"
-    title = (meeting.get("title") or "Untitled").strip()
-    return f"{date} {sanitize_filename(title)}"
+    if start:
+        tokens = {
+            "year": start.strftime("%Y"),
+            "month": start.strftime("%m"),
+            "day": start.strftime("%d"),
+            "date": start.strftime(date_format),
+        }
+    else:
+        tokens = {"year": "unknown", "month": "unknown", "day": "unknown", "date": "0000-00-00"}
+    tokens["title"] = sanitize_filename((meeting.get("title") or "Untitled").strip())
+    return _SafeTokens(tokens)
+
+
+def _render(template: str, fallback: str, tokens: _SafeTokens) -> str:
+    """Render ``template``, falling back to ``fallback`` on a malformed template."""
+    for candidate in (template, fallback):
+        try:
+            return candidate.format_map(tokens)
+        except (ValueError, IndexError):  # stray/unbalanced braces, bad format spec
+            continue
+    return tokens.get("title") or "meeting"
+
+
+def filename_for(
+    meeting: dict,
+    *,
+    template: str = DEFAULT_FILENAME_TEMPLATE,
+    date_format: str = DEFAULT_DATE_FORMAT,
+) -> str:
+    """Return a filename stem (no extension) from ``template``, sanitized for disk.
+
+    Default template ``{date} {title}`` reproduces the ``YYYY-MM-DD Title`` form.
+    Path separators in the result are flattened — a filename is a single segment.
+    """
+    rendered = _render(template, DEFAULT_FILENAME_TEMPLATE, _tokens(meeting, date_format))
+    return sanitize_filename(rendered)
+
+
+def folder_for(
+    meeting: dict,
+    *,
+    template: str = DEFAULT_FOLDER_TEMPLATE,
+    date_format: str = DEFAULT_DATE_FORMAT,
+) -> str:
+    """Return the sub-folder path from ``template`` (``/`` separates segments).
+
+    Each segment is sanitized independently so slashes stay meaningful; empty
+    segments are dropped. Default ``{year}/{month}`` gives ``2026/08``.
+    """
+    rendered = _render(template, DEFAULT_FOLDER_TEMPLATE, _tokens(meeting, date_format))
+    segments = [sanitize_filename(seg) for seg in rendered.split("/") if seg.strip()]
+    return "/".join(segments)
+
+
+def validate_template(template: str) -> None:
+    """Raise ``ValueError`` if ``template`` is malformed (e.g. unbalanced braces).
+
+    Unknown ``{tokens}`` are allowed — they render empty at runtime — so only
+    structurally-broken templates are rejected. Used by the CLI before saving.
+    """
+    sample = {"start_time_ms": 1787328000000, "title": "Sample Meeting"}
+    template.format_map(_tokens(sample, DEFAULT_DATE_FORMAT))
 
 
 def sanitize_filename(name: str) -> str:

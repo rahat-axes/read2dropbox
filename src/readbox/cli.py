@@ -13,12 +13,13 @@ is just argument parsing and friendly output.
 from __future__ import annotations
 
 import time
+from dataclasses import replace
 from datetime import datetime, timezone
 from typing import Optional
 
 import typer
 
-from . import auth, config, sync as sync_mod
+from . import auth, config, formatter, sync as sync_mod
 from .auth import AuthError, TokenStore, read_access_token
 from .read_client import ReadAPIError, ReadClient
 
@@ -179,6 +180,62 @@ def _status_line(name: str, ok: bool) -> None:
     typer.secho(f"  {mark} {name}{suffix}", fg=color)
 
 
+# -- config ------------------------------------------------------------------
+
+# A dummy meeting used to validate templates before saving.
+_SAMPLE_MEETING = {"start_time_ms": 1787328000000, "title": "Sample Meeting"}
+
+
+def config_(  # registered as `readbox config`
+    key: Optional[str] = typer.Argument(
+        None, help=f"Setting to change: {', '.join(config.SETTING_KEYS)}."
+    ),
+    value: Optional[str] = typer.Argument(
+        None, help="New value; omit both args to just show current settings."
+    ),
+) -> None:
+    """Show or change output settings (Dropbox folder, filename/date templates)."""
+    settings = config.load_settings()
+
+    if key is not None:
+        if key not in config.SETTING_KEYS:
+            typer.secho(
+                f"Unknown setting '{key}'. Valid keys: {', '.join(config.SETTING_KEYS)}",
+                fg=typer.colors.RED,
+                err=True,
+            )
+            raise typer.Exit(1)
+        if value is None:
+            typer.secho("Provide a value to set, or omit the key to view all.", err=True)
+            raise typer.Exit(1)
+        _validate_setting(key, value)
+        settings = replace(settings, **{key: value})
+        config.save_settings(settings)
+        typer.secho(f"✓ {key} = {value}", fg=typer.colors.GREEN)
+
+    typer.echo("Current settings:")
+    for k in config.SETTING_KEYS:
+        typer.echo(f"  {k} = {getattr(settings, k)}")
+    md, _ = sync_mod.dropbox_paths(_SAMPLE_MEETING, settings)
+    typer.echo(f"\nExample path: {md}")
+    typer.echo(f"Settings file: {config.settings_path()}")
+
+
+def _validate_setting(key: str, value: str) -> None:
+    """Reject obviously-broken values before persisting them."""
+    if not value.strip():
+        typer.secho(f"{key} cannot be empty.", fg=typer.colors.RED, err=True)
+        raise typer.Exit(1)
+    try:
+        if key == "date_format":
+            datetime.now(tz=timezone.utc).strftime(value)
+        elif key in ("filename_template", "folder_template"):
+            formatter.validate_template(value)
+    except (ValueError, KeyError) as exc:
+        typer.secho(f"Invalid {key}: {exc}", fg=typer.colors.RED, err=True)
+        raise typer.Exit(1)
+
+
 # -- helpers -----------------------------------------------------------------
 
 
@@ -196,8 +253,9 @@ def _fmt_epoch(epoch: float) -> str:
     return dt.strftime("%Y-%m-%d %H:%M UTC")
 
 
-# Register `auth` under its name (function is `auth_` to avoid shadowing the module).
+# Register commands whose functions are suffixed to avoid shadowing imported modules.
 app.command("auth")(auth_)
+app.command("config")(config_)
 
 
 def main() -> None:

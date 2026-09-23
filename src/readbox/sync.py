@@ -24,18 +24,15 @@ import json
 import os
 import time
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Optional
 
 from . import config
 from .auth import TokenStore, read_access_token
+from .config import Settings
 from .dropbox_client import DropboxClient, DropboxError
-from .formatter import filename_for, to_json, to_markdown
+from .formatter import filename_for, folder_for, to_json, to_markdown
 from .read_client import ReadAPIError, ReadClient
-
-#: Default Dropbox root folder (see plan §1). Configurable in Phase 7.
-DEFAULT_ROOT = "Read AI"
 
 #: Current on-disk state schema version, so future changes can migrate cleanly.
 STATE_VERSION = 1
@@ -111,23 +108,27 @@ def _meeting_timestamp(meeting: dict[str, Any]) -> Optional[int]:
     return None
 
 
-def _year_month(meeting: dict[str, Any]) -> tuple[str, str]:
-    ms = meeting.get("start_time_ms")
-    if isinstance(ms, int):
-        dt = datetime.fromtimestamp(ms / 1000, tz=timezone.utc)
-        return dt.strftime("%Y"), dt.strftime("%m")
-    return "unknown", "unknown"
-
-
-def dropbox_paths(meeting: dict[str, Any], root: str = DEFAULT_ROOT) -> tuple[str, str]:
+def dropbox_paths(
+    meeting: dict[str, Any], settings: Optional[Settings] = None
+) -> tuple[str, str]:
     """Return the ``(markdown, json)`` Dropbox paths for a meeting.
 
     Only ``start_time_ms`` + ``title`` are needed, both present on the list
     summary, so the destination can be computed without fetching the full report.
+    Folder layout, filename, and date format come from ``settings`` (defaults
+    reproduce ``/Read AI/YYYY/MM/YYYY-MM-DD Title``).
     """
-    year, month = _year_month(meeting)
-    stem = filename_for(meeting)
-    base = f"/{root}/{year}/{month}/{stem}"
+    settings = settings or Settings()
+    folder = folder_for(
+        meeting, template=settings.folder_template, date_format=settings.date_format
+    )
+    stem = filename_for(
+        meeting,
+        template=settings.filename_template,
+        date_format=settings.date_format,
+    )
+    parts = [p.strip("/") for p in (settings.root_folder, folder, stem) if p.strip("/")]
+    base = "/" + "/".join(parts)
     return f"{base}.md", f"{base}.json"
 
 
@@ -138,7 +139,7 @@ def sync(
     read: ReadClient,
     dropbox: DropboxClient,
     *,
-    root: str = DEFAULT_ROOT,
+    settings: Optional[Settings] = None,
     state_path: Optional[Path] = None,
     full: bool = False,
     start_time_ms: Optional[int] = None,
@@ -149,7 +150,8 @@ def sync(
     Args:
         read: source client (already holding a valid token).
         dropbox: destination client.
-        root: top-level Dropbox folder name.
+        settings: output options (root folder, templates); defaults to
+            ``config.load_settings()``.
         state_path: where the incremental state lives; defaults to
             ``config.state_path()``.
         full: re-upload every meeting, ignoring stored timestamps.
@@ -157,6 +159,7 @@ def sync(
             cutoff (server-side filter — powers the CLI's ``--days``).
         logger: optional sink for per-meeting progress lines.
     """
+    settings = settings or config.load_settings()
     state_path = state_path or config.state_path()
     state = load_state(state_path)
     meetings_state: dict[str, Any] = state["meetings"]
@@ -181,7 +184,7 @@ def sync(
 
         try:
             full_meeting = read.get_meeting(meeting_id)
-            md_path, json_path = dropbox_paths(summary, root)
+            md_path, json_path = dropbox_paths(summary, settings)
             dropbox.upload(to_markdown(full_meeting).encode("utf-8"), md_path)
             dropbox.upload(to_json(full_meeting).encode("utf-8"), json_path)
         except (ReadAPIError, DropboxError) as exc:
@@ -206,7 +209,7 @@ def sync(
 def run_sync(
     *,
     store: Optional[TokenStore] = None,
-    root: str = DEFAULT_ROOT,
+    settings: Optional[Settings] = None,
     state_path: Optional[Path] = None,
     full: bool = False,
     start_time_ms: Optional[int] = None,
@@ -220,7 +223,7 @@ def run_sync(
     return sync(
         read,
         dropbox,
-        root=root,
+        settings=settings,
         state_path=state_path,
         full=full,
         start_time_ms=start_time_ms,
